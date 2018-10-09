@@ -1,15 +1,49 @@
 @keyframes shake {
-    0% { transform: translate(1px, 1px) rotate(0deg); }
-    10% { transform: translate(-1px, -2px) rotate(-1deg); }
-    20% { transform: translate(-3px, 0px) rotate(1deg); }
-    30% { transform: translate(3px, 2px) rotate(0deg); }
-    40% { transform: translate(1px, -1px) rotate(1deg); }
-    50% { transform: translate(-1px, 2px) rotate(-1deg); }
-    60% { transform: translate(-3px, 1px) rotate(0deg); }
-    70% { transform: translate(3px, 1px) rotate(-1deg); }
-    80% { transform: translate(-1px, -1px) rotate(1deg); }
-    90% { transform: translate(1px, 2px) rotate(0deg); }
-    100% { transform: translate(1px, -2px) rotate(-1deg); }
+    0% {
+        transform: translate(1px, 1px) rotate(0deg);
+    }
+    10% {
+        transform: translate(-1px, -2px) rotate(-1deg);
+    }
+    20% {
+        transform: translate(-3px, 0px) rotate(1deg);
+    }
+    30% {
+        transform: translate(3px, 2px) rotate(0deg);
+    }
+    40% {
+        transform: translate(1px, -1px) rotate(1deg);
+    }
+    50% {
+        transform: translate(-1px, 2px) rotate(-1deg);
+    }
+    60% {
+        transform: translate(-3px, 1px) rotate(0deg);
+    }
+    70% {
+        transform: translate(3px, 1px) rotate(-1deg);
+    }
+    80% {
+        transform: translate(-1px, -1px) rotate(1deg);
+    }
+    90% {
+        transform: translate(1px, 2px) rotate(0deg);
+    }
+    100% {
+        transform: translate(1px, -2px) rotate(-1deg);
+    }
+}
+
+@keyframes ZoomInAndOut {
+    0% {
+        transform: scale(1, 1);
+    }
+    50% {
+        transform: scale(1.2, 1.2);
+    }
+    100% {
+        transform: scale(1, 1);
+    }
 }
 
 input {
@@ -72,15 +106,45 @@ input {
     color: white;
     font-family: "kiona" !important;
 }
-.tile{
+
+.tile {
     width: 100%;
     height: 120px;
     border: 1px solid #0691b8;
+    background-color: rgba(0,0,0,0.1);
+    background-size: cover;
+    background-repeat: no-repeat;
 }
-.tile:hover{
-    animation: shake 0.5s; 
-    animation-iteration-count: infinite; 
+
+.tile:hover {
+    animation: shake 0.5s;
+    animation-iteration-count: 1;
 }
-.tiles-section{
-    padding-top:20px !important;
+
+.tiles-section {
+    padding-top: 20px !important;
 }
+
+.addToCart .favourite {
+    position: absolute;
+    top: 90px;
+    right: 20px;
+    padding: 0;
+    border-radius: 50%;
+    color: #0691b8;
+    font-size: 20px;
+    font-family: "kiona" !important;
+}
+
+.heart {
+    color: #FFF;
+    animation: ZoomInAndOut 0.5s;
+    animation-iteration-count: infinite;
+}
+
+.heart_ {
+    color: #0691b8;
+    animation: ZoomInAndOut 0.5s;
+    animation-iteration-count: infinite;
+}
+
