@@ -21,7 +21,13 @@
         </div>
       </div>
       <div class="d-inline-block custom">
-        <i class="fa fa-bars" style="color:#0691b8;font-size:25px;padding-top:10px;"></i>
+        <i class="fa fa-bars" style="color:#0691b8;font-size:25px;padding-top:10px;" (click)="toggleFilter()"></i>
+      </div>
+      <div class="custom"  [@animateFilterItems]="filterItems ? 'large' : 'small'">
+          <button class="btn btn-primary btn-round custom_">Hike</button>
+          <button class="btn btn-primary btn-round custom_">Down South</button>
+          <button class="btn btn-primary btn-round custom_">Adventure</button>
+          <button class="btn btn-primary btn-round custom_">Hill Country</button>
       </div>
     </div>
   </div>
@@ -37,6 +43,7 @@
             </span>
           </span>
         </div>
+        <h4>Hike</h4>
       </div>
       <div class="col-md-2">
         <div class="tile">

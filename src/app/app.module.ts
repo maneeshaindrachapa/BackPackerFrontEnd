@@ -1,9 +1,9 @@
 import { BrowserModule } from '@angular/platform-browser';
 import { NgModule } from '@angular/core';
 import { SlideshowModule } from 'ng-simple-slideshow';
-import {NgbModule} from '@ng-bootstrap/ng-bootstrap';
+import { NgbModule } from '@ng-bootstrap/ng-bootstrap';
 import { FormsModule } from '@angular/forms';
-import { NouisliderModule } from 'ng2-nouislider';
+import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 
 import { AppComponent } from './app.component';
 import { CarouselComponent } from './components/firstPage/carousel/carousel.component';
@@ -25,8 +25,8 @@ import { FooterComponent } from './components/firstPage/footer/footer.component'
     BrowserModule,
     SlideshowModule,
     FormsModule,
-    NgbModule,
-    NouisliderModule
+    NgbModule, 
+    BrowserAnimationsModule
   ],
   providers: [],
   bootstrap: [AppComponent]
