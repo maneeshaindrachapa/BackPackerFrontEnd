@@ -1,0 +1,52 @@
+<div class="container">
+  <div class="row">
+    <div class="col-md-12">
+      <div class="d-inline-block custom">
+        <a href="#" class="notification">
+          <span><img src="../../../../assets/img/icons/cart.png" width="40px" height="40px"></span>
+          <span class="badge">3</span>
+        </a>
+      </div>
+      <div class="d-inline-block custom">
+        <div class="form-group">
+          <div class="input-group " [ngClass]="{'input-group-focus':focus===true}">
+            <input class="form-control" type="text" placeholder="Search" aria-describedby="basic-addon1" (focus)="focus=true"
+              (blur)="focus=false">
+            <div class="input-group-append">
+              <span class="input-group-text" id="basic-addon1" (click)="search()">
+                <i class="fa fa-search" aria-hidden="true" height="50px" width="50px"></i>
+              </span>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="d-inline-block custom">
+        <i class="fa fa-bars" style="color:#0691b8;font-size:25px;padding-top:10px;"></i>
+      </div>
+    </div>
+  </div>
+</div>
+<div class="section tiles-section">
+  <div class="container">
+    <div class="row">
+      <div class="col-md-2">
+        <div class="tile"></div>
+      </div>
+      <div class="col-md-2">
+        <div class="tile"></div>
+      </div>
+      <div class="col-md-2">
+        <div class="tile"></div>
+      </div>
+      <div class="col-md-2">
+        <div class="tile"></div>
+      </div>
+      <div class="col-md-2">
+        <div class="tile"></div>
+      </div>
+      <div class="col-md-2">
+        <div class="tile"></div>
+      </div>
+    </div>
+  </div>
+</div>
