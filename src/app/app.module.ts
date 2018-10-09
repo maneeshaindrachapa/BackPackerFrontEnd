@@ -9,13 +9,17 @@ import { AppComponent } from './app.component';
 import { CarouselComponent } from './components/firstPage/carousel/carousel.component';
 import { NavbarComponent } from './components/firstPage/navbar/navbar.component';
 import { AboutUsComponent } from './components/firstPage/about-us/about-us.component';
+import { SearchrowComponent } from './components/firstPage/searchrow/searchrow.component';
+import { FooterComponent } from './components/firstPage/footer/footer.component';
 
 @NgModule({
   declarations: [
     AppComponent,
     CarouselComponent,
     NavbarComponent,
-    AboutUsComponent
+    AboutUsComponent,
+    SearchrowComponent,
+    FooterComponent
   ],
   imports: [
     BrowserModule,
