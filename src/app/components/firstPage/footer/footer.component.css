@@ -12,3 +12,9 @@
     font-family: "kiona" !important;
     font-size:15px;
 }
+.footer-nav ul li i{
+    transition: transform 0.2s ease-in-out;
+}
+.footer-nav ul li i:hover{
+    transform: scale(1.2);
+}
