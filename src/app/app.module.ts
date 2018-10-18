@@ -4,6 +4,7 @@ import { SlideshowModule } from 'ng-simple-slideshow';
 import { NgbModule } from '@ng-bootstrap/ng-bootstrap';
 import { FormsModule } from '@angular/forms';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
+import { RouterModule, Routes } from '@angular/router';
 
 import { AppComponent } from './app.component';
 import { CarouselComponent } from './components/firstPage/carousel/carousel.component';
@@ -11,6 +12,12 @@ import { NavbarComponent } from './components/firstPage/navbar/navbar.component'
 import { AboutUsComponent } from './components/firstPage/about-us/about-us.component';
 import { SearchrowComponent } from './components/firstPage/searchrow/searchrow.component';
 import { FooterComponent } from './components/firstPage/footer/footer.component';
+import { FirstPageFullComponent } from './components/firstPage/first-page-full/first-page-full.component';
+import { SecondPageFullComponent } from './components/secondPage/second-page-full/second-page-full.component';
+
+const appRoutes: Routes= [
+  {path:"", component:FirstPageFullComponent},{path:"details",component:SecondPageFullComponent}
+  ];
 
 @NgModule({
   declarations: [
@@ -19,14 +26,17 @@ import { FooterComponent } from './components/firstPage/footer/footer.component'
     NavbarComponent,
     AboutUsComponent,
     SearchrowComponent,
-    FooterComponent
+    FooterComponent,
+    FirstPageFullComponent,
+    SecondPageFullComponent
   ],
   imports: [
     BrowserModule,
     SlideshowModule,
     FormsModule,
     NgbModule, 
-    BrowserAnimationsModule
+    BrowserAnimationsModule,
+    RouterModule.forRoot(appRoutes)
   ],
   providers: [],
   bootstrap: [AppComponent]
