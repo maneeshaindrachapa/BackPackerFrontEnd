@@ -173,3 +173,15 @@ button {
     margin-bottom: 2%;
     margin-top: 1%;
 }
+
+.btn-round{
+    background-color: #0691b8 !important;
+    margin-bottom: 10px;
+    float: right;
+    font-family: "kiona" !important;
+    border: none !important;
+    transition: transform 0.2s ease-in-out;
+}
+.btn-round:hover{
+    transform: scale(1.1);
+}

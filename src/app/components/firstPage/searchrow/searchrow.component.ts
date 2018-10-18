@@ -1,5 +1,6 @@
 import { Component, OnInit } from '@angular/core';
 import {  trigger,  state,  style,  animate,  transition ,keyframes} from '@angular/animations';
+import { Router } from "@angular/router";
 
 @Component({
   selector: 'app-searchrow',
@@ -16,7 +17,7 @@ import {  trigger,  state,  style,  animate,  transition ,keyframes} from '@angu
 export class SearchrowComponent implements OnInit {
   focus: any;
   filterItems:boolean=false;
-  constructor() { }
+  constructor(private router:Router) { }
 
   ngOnInit() {
   }
@@ -26,6 +27,9 @@ export class SearchrowComponent implements OnInit {
   }
   toggleFilter(){
     this.filterItems=!this.filterItems;
+  }
+  secondPage(){
+    this.router.navigate(["details"]);
   }
 
 }

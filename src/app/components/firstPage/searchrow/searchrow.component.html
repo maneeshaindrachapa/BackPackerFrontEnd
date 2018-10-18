@@ -23,11 +23,11 @@
       <div class="d-inline-block custom">
         <i class="fa fa-bars" style="color:#0691b8;font-size:25px;padding-top:10px;" (click)="toggleFilter()"></i>
       </div>
-      <div class="custom"  [@animateFilterItems]="filterItems ? 'large' : 'small'">
-          <button class="btn btn-primary btn-round custom_">Hike</button>
-          <button class="btn btn-primary btn-round custom_">Down South</button>
-          <button class="btn btn-primary btn-round custom_">Adventure</button>
-          <button class="btn btn-primary btn-round custom_">Hill Country</button>
+      <div class="custom" [@animateFilterItems]="filterItems ? 'large' : 'small'">
+        <button class="btn btn-primary btn-round custom_">Hike</button>
+        <button class="btn btn-primary btn-round custom_">Down South</button>
+        <button class="btn btn-primary btn-round custom_">Adventure</button>
+        <button class="btn btn-primary btn-round custom_">Hill Country</button>
       </div>
     </div>
   </div>
@@ -78,6 +78,16 @@
       <div class="col-md-2">
         <div class="tile"></div>
       </div>
+    </div>
+  </div>
+</div>
+<div class="container">
+  <div class="row">
+    <div class="col-md-10"></div>
+    <div class="col-md-2">
+      <button type="button" class="btn btn-info btn-round" (click)="secondPage()">
+        Next&nbsp;<i class="fa fa-arrow-right"></i>
+      </button>
     </div>
   </div>
 </div>
