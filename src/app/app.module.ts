@@ -5,6 +5,7 @@ import { NgbModule } from '@ng-bootstrap/ng-bootstrap';
 import { FormsModule } from '@angular/forms';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 import { RouterModule, Routes } from '@angular/router';
+import { MatButtonModule } from '@angular/material';
 
 import { AppComponent } from './app.component';
 import { CarouselComponent } from './components/firstPage/carousel/carousel.component';
@@ -14,9 +15,10 @@ import { SearchrowComponent } from './components/firstPage/searchrow/searchrow.c
 import { FooterComponent } from './components/firstPage/footer/footer.component';
 import { FirstPageFullComponent } from './components/firstPage/first-page-full/first-page-full.component';
 import { SecondPageFullComponent } from './components/secondPage/second-page-full/second-page-full.component';
+import { TravelDetailsComponent } from './components/secondPage/travel-details/travel-details.component';
 
-const appRoutes: Routes= [
-  {path:"", component:FirstPageFullComponent},{path:"details",component:SecondPageFullComponent}
+const appRoutes: Routes = [
+  {path: '' , component: FirstPageFullComponent}, { path: 'details', component: SecondPageFullComponent}
   ];
 
 @NgModule({
@@ -28,14 +30,16 @@ const appRoutes: Routes= [
     SearchrowComponent,
     FooterComponent,
     FirstPageFullComponent,
-    SecondPageFullComponent
+    SecondPageFullComponent,
+    TravelDetailsComponent
   ],
   imports: [
     BrowserModule,
     SlideshowModule,
     FormsModule,
-    NgbModule, 
+    NgbModule,
     BrowserAnimationsModule,
+    MatButtonModule,
     RouterModule.forRoot(appRoutes)
   ],
   providers: [],
