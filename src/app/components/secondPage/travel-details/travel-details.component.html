@@ -1,0 +1,67 @@
+<div class="section">
+    <div class="container">
+        <div class="tim-title">
+            <h3>DownSouth</h3>
+        </div>
+        <p>"Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et
+            dolore
+            magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea
+            commodo
+            consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla
+            pariatur.
+            Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est
+            laborum."
+        </p><br>
+        <div class="row">
+            <div class="col-xs-8 col-sm-6 col-md-3">
+                <a href="#" class="photo">
+                    <img src="assets/img/1.jpg" class="img-rounded img-responsive" alt="Rounded Image">
+                    <div class="glow-wrap">
+                        <i class="glow"></i>
+                    </div>
+                    <h6>Galle Fort</h6>
+                </a>
+            </div>
+            <div class="col-xs-8 col-sm-6 col-md-3">
+                <a href="#" class="photo">
+                    <img src="assets/img/2.jpg" class="img-rounded img-responsive" alt="Rounded Image">
+                    <div class="glow-wrap">
+                        <i class="glow"></i>
+                    </div>
+                    <h6>Galle Fort</h6>
+                </a>
+            </div>
+            <div class="col-xs-8 col-sm-6 col-md-3">
+                <a href="#" class="photo">
+                    <img src="assets/img/1.jpg" class="img-rounded img-responsive" alt="Rounded Image">
+                    <div class="glow-wrap">
+                        <i class="glow"></i>
+                    </div>
+                    <h6>Galle Fort</h6>
+                </a>
+            </div>
+            <div class="col-xs-8 col-sm-6 col-md-3">
+                <a href="#" class="photo">
+                    <img src="assets/img/2.jpg" class="img-rounded img-responsive" alt="Rounded Image">
+                    <div class="glow-wrap">
+                        <i class="glow"></i>
+                    </div>
+                    <h6>Galle Fort</h6>
+                </a>
+            </div>
+        </div>
+        <div id="fab-dismiss" *ngIf="fabTogglerState==='active'" (click)="onToggleFab()">
+        </div>
+        <div class="fab-container">
+            <button mat-fab class="fab-toggler" (click)="onToggleFab()">
+                <i class="material-icons" [@fabToggler]="{value: fabTogglerState}">add</i> <!-- Animation here -->
+            </button>
+            <div [@speedDialStagger]="buttons.length">
+                <!-- and here -->
+                <button *ngFor="let btn of buttons" mat-mini-fab class="fab-secondary" color="secondary">
+                    <i class="material-icons">{{btn.icon}}</i>
+                </button>
+            </div>
+        </div>
+    </div>
+</div>
