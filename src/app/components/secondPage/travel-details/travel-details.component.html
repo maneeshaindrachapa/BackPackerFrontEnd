@@ -1,7 +1,48 @@
 <div class="section">
     <div class="container">
         <div class="tim-title">
-            <h3>DownSouth</h3>
+            <h3>DownSouth&nbsp;&nbsp;&nbsp;<i class="fa fa-wpexplorer" aria-hidden="true" (click)="open(content)"></i></h3><br>
+            <!--model-->
+            <ng-template #content let-c="close" let-d="dismiss">
+                <div class="modal-header">
+                    <h5 class="modal-title text-center">Downsouth</h5>
+                    <button type="button" class="close" aria-label="Close" (click)="d('Cross click')">
+                        <span aria-hidden="true">&times;</span>
+                    </button>
+                </div>
+
+                <!--map-->
+                <div class="modal-body" style="padding:0 !important">
+                    <agm-map [latitude]="downsouthlat" [longitude]="downsouthlng" style="height: 300px; width:100%;"
+                        [styles]="mapstyles" [zoom]="8" [disableDefaultUI]="false" [zoomControl]="false">
+                        <agm-marker-cluster [imagePath]="'https://googlemaps.github.io/js-marker-clusterer/images/m'">
+                            <agm-marker [label]="{color: '#000',
+                                                fontFamily: 'kiona',
+                                                fontSize: '10px',
+                                                fontWeight: 'bold',text:'Galle'}"
+                                [latitude]="downsouthlat" [longitude]="downsouthlng"
+                                [iconUrl]="{
+                                    url: url,
+                                    scaledSize: {
+                                        width: 40,
+                                        height: 60
+                                    }
+                                }"></agm-marker>
+                        </agm-marker-cluster>
+                    </agm-map>
+                </div>
+                <!--map end-->
+
+                <div class="modal-footer">
+                    <div class="left-side">
+                        <button type="button" class="btn btn-default btn-link" (click)="d('Close click')">Never mind</button>
+                    </div>
+                    <div class="divider"></div>
+                    <div class="right-side">
+                        <button type="button" class="btn btn-danger btn-link" (click)="d('Close click')">DELETE</button>
+                    </div>
+                </div>
+            </ng-template>
         </div>
         <p>"Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et
             dolore

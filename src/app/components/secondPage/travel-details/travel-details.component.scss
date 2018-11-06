@@ -1,4 +1,4 @@
-h6,h3,p{
+h6,h3,p,h5,.modal-body,.btn-link{
     font-family: "kiona" !important;
     color: #0691b8;
 }
@@ -48,7 +48,7 @@ h6,h3,p{
   }
   
   .photo{
-    position: absolute;
+    position: relative;
     display: block;
   }
   
@@ -95,4 +95,10 @@ h6,h3,p{
   .photo:hover .glow-wrap{
     margin-top: 0;
     filter: grayscale(0%) contrast(100%);
+  }
+  .fa-wpexplorer{
+    transform: scale(1.0);
+  }
+  .fa-wpexplorer:hover{
+    transform: scale(1.2);
   }

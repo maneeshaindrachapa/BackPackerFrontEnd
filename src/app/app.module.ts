@@ -6,6 +6,8 @@ import { FormsModule } from '@angular/forms';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 import { RouterModule, Routes } from '@angular/router';
 import { MatButtonModule } from '@angular/material';
+import { AgmCoreModule } from '@agm/core';
+import {AgmJsMarkerClustererModule} from '@agm/js-marker-clusterer';
 
 import { AppComponent } from './app.component';
 import { CarouselComponent } from './components/firstPage/carousel/carousel.component';
@@ -36,6 +38,10 @@ const appRoutes: Routes = [
   imports: [
     BrowserModule,
     SlideshowModule,
+    AgmCoreModule.forRoot({
+      apiKey: 'AIzaSyC0RZ_xD_RuW80wjaZt6XFx94Fq1-D5lws'
+    }),
+    AgmJsMarkerClustererModule,
     FormsModule,
     NgbModule,
     BrowserAnimationsModule,
