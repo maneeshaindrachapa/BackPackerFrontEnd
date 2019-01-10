@@ -144,7 +144,7 @@ input {
 
 .heart_ {
     color: #0691b8;
-    animation: ZoomInAndOut 0.5s;
+    animation: ZoomInAndOut 2s;
     animation-iteration-count: infinite;
 }
 
