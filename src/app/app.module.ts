@@ -18,9 +18,11 @@ import { FooterComponent } from './components/firstPage/footer/footer.component'
 import { FirstPageFullComponent } from './components/firstPage/first-page-full/first-page-full.component';
 import { SecondPageFullComponent } from './components/secondPage/second-page-full/second-page-full.component';
 import { TravelDetailsComponent } from './components/secondPage/travel-details/travel-details.component';
+import { AnimatedbackgroundComponent } from './components/animatedbackground/animatedbackground.component';
 
 const appRoutes: Routes = [
-  {path: '' , component: FirstPageFullComponent}, { path: 'details', component: SecondPageFullComponent}
+  {path: '' , component: FirstPageFullComponent}, { path: 'details', component: SecondPageFullComponent},
+  {path: '123', component: AnimatedbackgroundComponent}
   ];
 
 @NgModule({
@@ -33,7 +35,8 @@ const appRoutes: Routes = [
     FooterComponent,
     FirstPageFullComponent,
     SecondPageFullComponent,
-    TravelDetailsComponent
+    TravelDetailsComponent,
+    AnimatedbackgroundComponent
   ],
   imports: [
     BrowserModule,
